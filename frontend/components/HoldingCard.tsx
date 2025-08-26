@@ -20,7 +20,7 @@ export const HoldingCard: React.FC<HoldingCardProps> = ({
   onEdit,
   onDelete
 }) => {
-  const { symbol, shares, avgPrice, currentPrice, totalValue } = holding;
+  const { symbol, shares, avgPrice, currentPrice } = holding;
   const currentValue = currentPrice ? currentPrice * shares : 0;
   const gainLoss = currentValue - (avgPrice * shares);
   const gainLossPercent = ((currentValue - (avgPrice * shares)) / (avgPrice * shares)) * 100;

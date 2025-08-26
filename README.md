@@ -33,28 +33,6 @@ A full-stack web application for tracking stock portfolios with real-time quotes
 - **GitHub Actions** for CI/CD
 - **Prisma** migrations for database schema management
 
-## Project Structure
-
-```
-portfolio-tracker/
-├── backend/                 # Node.js/Express API
-│   ├── prisma/             # Database schema and migrations
-│   ├── src/
-│   │   ├── routes/         # API route handlers
-│   │   ├── services/       # Business logic
-│   │   ├── middleware/     # Express middleware
-│   │   ├── utils/          # Utility functions
-│   │   └── types/          # TypeScript type definitions
-│   └── tests/              # Backend tests
-├── frontend/               # Next.js React app
-│   ├── components/         # React components
-│   ├── pages/              # Next.js pages
-│   ├── services/           # API service layer
-│   ├── utils/              # Utility functions
-│   └── styles/             # CSS styles
-├── docker/                 # Docker configuration
-└── .github/workflows/      # CI/CD pipelines
-```
 
 ## Getting Started
 
@@ -159,15 +137,8 @@ portfolio-tracker/
    DATABASE_URL="postgresql://portfolio_user:portfolio_password@localhost:5432/portfolio_tracker"
    ```
 
-#### Option 2: Free Cloud Database (Easiest)
-1. **Sign up for a free PostgreSQL database:**
-   - [Supabase](https://supabase.com) - Create project → Settings → Database → Connection string
-   - [Neon](https://neon.tech) - Create project → Connection details
-   - [Railway](https://railway.app) - Add PostgreSQL service → Variables tab
 
-2. **Copy the provided connection string to your .env file**
-
-#### Option 3: Local PostgreSQL
+#### Option 2: Local PostgreSQL
 1. **Install PostgreSQL:**
    ```bash
    # macOS with Homebrew
@@ -294,29 +265,3 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 - Error logging
 - Performance monitoring
 - Database connection pooling
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, email support@portfoliotracker.com or create an issue in the GitHub repository.
-
-## Roadmap
-
-- [ ] Real-time WebSocket updates
-- [ ] Mobile app (React Native)
-- [ ] Advanced charting (Candlestick, Volume)
-- [ ] Portfolio optimization suggestions
-- [ ] News integration
-- [ ] Dividend tracking
-- [ ] Tax reporting features
-- [ ] Social features (sharing portfolios)
-
-## Acknowledgments
-
-- [Alpha Vantage](https://www.alphavantage.co/) for market data API
-- [Prisma](https://www.prisma.io/) for database toolkit
-- [Next.js](https://nextjs.org/) for React framework
-- [Express.js](https://expressjs.com/) for backend framework
